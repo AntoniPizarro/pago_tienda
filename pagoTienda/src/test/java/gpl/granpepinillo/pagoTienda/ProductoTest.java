@@ -1,6 +1,7 @@
 package gpl.granpepinillo.pagoTienda;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 import gpl.granpepinillo.pagoTienda.productos.Producto;
 
 public class ProductoTest {
@@ -9,58 +10,81 @@ public class ProductoTest {
     public void getCodigoTest() {
         String codigo = "87JHK7892";
         Producto producto = new Producto("Manzana roja", codigo);
-        assertEqual(codigo, producto.getCodigo());
+        assertEquals(codigo, producto.getCodigo());
     }
 
     @Test
     public void getNombreTest() {
-		return this.nombre;
+      String nombre = "Manzana roja";
+      Producto producto = new Producto(nombre, "hjgki905896rui");
+      assertEquals(nombre, producto.getNombre());
 	}
 
 	@Test
-    public void setNombreTest(String nombre) {
-		this.nombre = nombre;
+    public void setNombreTest() {
+      String nombre = "Manzana roja";
+      Producto producto = new Producto(nombre, "hjgki905896rui");
+      nombre = "Plátano";
+      producto.setNombre(nombre);
+      assertEquals(nombre, producto.getNombre());
 	}
 
 	@Test
     public void getPrecioTest() {
-		return this.precio;
+      float precio = 0.31f;
+      Producto producto = new Producto("Plátano", "bnju908y9ui", precio, "Fruta", "El Frutero");
+      assertEquals(precio, producto.getPrecio(), 0.01f);
 	}
 
 	@Test
-    public void setPrecioTest(Float precio) {
-		this.precio = precio;
+    public void setPrecioTest() {
+		float precio = 0.67f;
+    Producto producto = new Producto("Mango", "cxfvgbn");
+    producto.setPrecio(precio);
+    assertEquals(precio, producto.getPrecio(), 0.01f);
 	}
 
 	@Test
     public void getCategoriaTest() {
-		return this.categoria;
+      String categoria = "Fruta";
+      Producto producto = new Producto("Mango", "cxfvgbn");
+      producto.setCategoria(categoria);
+      assertEquals(categoria, producto.getCategoria());
 	}
 
 	@Test
-    public void setCategoriaTest(String categoria) {
-		this.categoria = categoria;
+  public void setCategoriaTest() {
+      String categoria = "Fruta";
+      Producto producto = new Producto("Mango", "cxfvgbn");
+      producto.setCategoria(categoria);
+      assertEquals(categoria, producto.getCategoria());
 	}
 
     @Test
     public void getMarcaTest() {
-		return this.marca;
+      String marca = "El Frutero";
+      Producto producto = new Producto("Mango", "cxfvgbn");
+      producto.setMarca(marca);
+      assertEquals(marca, producto.getMarca());
 	}
 
 	@Test
-    public void setMarcaTest(String marca) {
-		this.marca = marca;
+  public void setMarcaTest() {
+      String marca = "El Frutero";
+      Producto producto = new Producto("Mango", "cxfvgbn");
+      producto.setMarca(marca);
+      assertEquals(marca, producto.getMarca());
 	}
 
-    @Test
-    public void aplicarDescuentoTest(float descuento) {
-        this.precio -= this.precio * ( descuento / 100 );
-    }
-
-    @Test
-    public void previsualizarDescuentoTest(float descuento) {
-        float prev = this.precio * ( descuento / 100 );
-        System.out.println(prev);
-    }
+  @Test
+  public void aplicarDescuentoTest() {
+    float precio = 0.67f;
+    float descuento = 30f;
+    float res = precio - precio * ( descuento / 100 );
+    Producto producto = new Producto("Mango", "cxfvgbn");
+    producto.setPrecio(precio);
+    producto.aplicarDescuento(descuento);
+    assertEquals(res, producto.getPrecio(), 0.01f);
+  }
 
 }

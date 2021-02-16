@@ -1,4 +1,4 @@
-package gpl.granpepinillo.trabajadores;
+package gpl.granpepinillo.pagoTienda.trabajadores;
 
 public class Empleado {
 
