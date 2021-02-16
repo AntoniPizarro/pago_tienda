@@ -1,0 +1,7 @@
+mvn clean package
+
+mvn clean jacoco:prepare-agent install jacoco:report
+
+mvn jacoco:report
+
+java -jar target/pagoTienda-1.0-SNAPSHOT.jar
