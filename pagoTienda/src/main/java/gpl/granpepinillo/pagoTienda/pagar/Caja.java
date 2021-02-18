@@ -10,6 +10,14 @@ public class Caja {
 
     private List<Producto> productos = new ArrayList<>();
     private Empleado empleado;
+    
+    public Caja() {
+
+    }
+    
+    public Caja(Empleado empleado) {
+        this.empleado = empleado;
+    }
 
     public List<Producto> getProductos() {
         return this.productos;
@@ -20,14 +28,6 @@ public class Caja {
     }
 
     public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
-    }
-    
-    public Caja() {
-
-    }
-    
-    public Caja(Empleado empleado) {
         this.empleado = empleado;
     }
 
@@ -42,12 +42,22 @@ public class Caja {
     }
 
     public void eliminarProducto(String codigo) {
-        for(Producto producto : productos) {
+        for(Producto producto : this.productos) {
             if (producto.getCodigo().equals(codigo)) {
-                productos.remove(producto);
+                this.productos.remove(producto);
                 break;
             }
         }
+    }
+
+    public List<Producto> getProducto(String codigo) {
+        List<Producto> get = new ArrayList<Producto>();
+        for (Producto producto : this.productos) {
+            if (producto.getCodigo() == codigo) {
+                get.add(producto);
+            }
+        }
+        return get;
     }
 
     public void eliminarProducto(String codigo, int Cantidad) {
@@ -61,12 +71,12 @@ public class Caja {
     }
 
     public void quitarEmpleado() {
-        empleado = null;
+        this.empleado = null;
     }
     
     public int numProducto(Producto producto) {
         int cantidad = 0;
-        for (Producto prod : productos) {
+        for (Producto prod : this.productos) {
             if(prod == producto) {
                 cantidad++;
             }
@@ -76,7 +86,7 @@ public class Caja {
 
     public int numProducto(String codigo) {
         int cantidad = 0;
-        for (Producto producto : productos) {
+        for (Producto producto :this.productos) {
             if(producto.getCodigo() == codigo) {
                 cantidad++;
             }
@@ -101,21 +111,27 @@ public class Caja {
         return nombres;
     }
 
-    public void subtotal() {//Falta completar
+    public void subtotal() {
+        System.out.println("==============================================================");
+        System.out.println("==============================================================");
         List<Producto> listaTicket = new ArrayList<>();
-        for (Producto producto : productos) {
+        for (Producto producto : this.productos) {
             if (!productoRepetido(producto, listaTicket)) {
                 listaTicket.add(producto);
             }
         }
-
+        float total = 0f;
         for (Producto producto : listaTicket) {
-            System.out.println("Artículo: " + producto.getNombre() + " - Cantidad: " + numProducto(producto.getCodigo()) + " - Precio: " + numProducto(producto) * producto.getPrecio() + "€");
+            System.out.println("Artículo: " + producto.getNombre() + " - Cantidad: " + numProducto(producto.getCodigo()) + " - Precio: " + String.format("%.02f", numProducto(producto.getCodigo()) * producto.getPrecio()) + " E");
+            total += numProducto(producto.getCodigo()) * producto.getPrecio();
         }
         System.out.println("");
+        System.out.println("Total: \t\t" + String.format("%.02f", total) + " E");
         System.out.println("");
         if(empleado != null) {
             System.out.println("Le atendió: " + empleado.getNombre());
         }
+        System.out.println("==============================================================");
+        System.out.println("==============================================================");
     }
 }
