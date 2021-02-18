@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="gpl.granpepinillo.pagoTienda.ProductoTest" time="0.003" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="gpl.granpepinillo.pagoTienda.ProductoTest" time="0.016" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Users\Granpepinillo\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\GRANPE~1\AppData\Local\Temp\surefire10541208538354433628\surefirebooter17584983552361418718.jar C:\Users\Granpepinillo\AppData\Local\Temp\surefire10541208538354433628 2021-02-18T22-33-22_078-jvmRun1 surefire12850657164595380611tmp surefire_015791910949830396410tmp"/>
+    <property name="sun.java.command" value="C:\Users\GRANPE~1\AppData\Local\Temp\surefire5326674093661629007\surefirebooter14785129818855692737.jar C:\Users\Granpepinillo\AppData\Local\Temp\surefire5326674093661629007 2021-02-18T22-55-59_163-jvmRun1 surefire4290082607670162931tmp surefire_018352920479415031464tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Granpepinillo\Documents\Toni\GIT\pago_tienda\pagoTienda\target\test-classes;C:\Users\Granpepinillo\Documents\Toni\GIT\pago_tienda\pagoTienda\target\classes;C:\Users\Granpepinillo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Granpepinillo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\GRANPE~1\AppData\Local\Temp\surefire10541208538354433628\surefirebooter17584983552361418718.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\GRANPE~1\AppData\Local\Temp\surefire5326674093661629007\surefirebooter14785129818855692737.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9"/>
@@ -62,12 +62,12 @@
   </properties>
   <testcase name="setNombreTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
   <testcase name="aplicarDescuentoTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
-  <testcase name="getCodigoTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
+  <testcase name="getCodigoTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0.001"/>
   <testcase name="getCategoriaTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
-  <testcase name="getMarcaTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
+  <testcase name="getMarcaTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0.001"/>
   <testcase name="getPrecioTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
   <testcase name="setMarcaTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
   <testcase name="setPrecioTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
   <testcase name="setCategoriaTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
-  <testcase name="getNombreTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0"/>
+  <testcase name="getNombreTest" classname="gpl.granpepinillo.pagoTienda.ProductoTest" time="0.001"/>
 </testsuite>

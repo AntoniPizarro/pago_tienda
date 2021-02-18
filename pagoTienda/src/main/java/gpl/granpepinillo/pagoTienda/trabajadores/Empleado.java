@@ -71,15 +71,13 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "{" +
-            " codigo='" + getCodigo() + "'" +
-            ", nombre='" + getNombre() + "'" +
-            ", appellidos='" + getAppellidos() + "'" +
-            ", dni='" + getDni() + "'" +
-            ", tiempoRealizado='" + getTiempoRealizado() + "'" +
-            ", sueldo='" + getSueldo() + "'" +
-            ", sector='" + getSector() + "'" +
-            "}";
+        return " codigo='" + getCodigo() + "'" + "\n" +
+            ", nombre='" + getNombre() + "'" + "\n" +
+            ", appellidos='" + getAppellidos() + "'" + "\n" +
+            ", dni='" + getDni() + "'" + "\n" +
+            ", tiempoRealizado='" + getTiempoRealizado() + "'" + "\n" +
+            ", sueldo='" + getSueldo() + "'" + "\n" +
+            ", sector='" + getSector() + "'";
     }
     
 

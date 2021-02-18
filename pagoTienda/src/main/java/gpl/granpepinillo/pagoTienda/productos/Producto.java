@@ -72,4 +72,13 @@ public class Producto {
         System.out.println(prev);
     }
 
+    @Override
+    public String toString() {
+        return " nombre='" + getNombre() + "'" + "\n" +
+            ", precio='" + getPrecio() + "'" + "\n" +
+            ", codigo='" + getCodigo() + "'" + "\n" +
+            ", categoria='" + getCategoria() + "'" + "\n" +
+            ", marca='" + getMarca() + "'";
+    }
+
 }

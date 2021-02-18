@@ -16,6 +16,9 @@ public class PagoTienda {
         */
         Empleado empleado1 = new Empleado("ES00000001", "Roberto", "Llinàs Cairmay", "45186457j", 1600.03f, "Caja");
         Caja caja1 = new Caja(empleado1);
+        System.out.println("_____________________________");
+        System.out.println(caja1.getEmpleado().toString());
+        System.out.println("=============================");
 
         /*
         Recibimos los productos de los proveedores y
@@ -40,6 +43,11 @@ public class PagoTienda {
         inventario.add(new Producto("Ordenador de sobremesa", codigoOrdenador, 860f, "Electrónica", "HP"));
         inventario.add(new Producto("Pollo de granja", codigoPollo, 11.50f, "Carne", "Montés"));
         inventario.add(new Producto("Naranja", codigoNaranja, 1.34f, "Fruta", "El Frutero"));
+        for (Producto producto : inventario) {
+            System.out.println("_____________________________");
+            System.out.println(producto.toString());
+        }
+        System.out.println("_____________________________");
 
         /*
         El cliente quiere comprar 17 productos:
@@ -97,7 +105,9 @@ public class PagoTienda {
         Los plátanos tienen un descuento del 20%
         */
         for (Producto producto : caja1.getProducto(codigoPlatano)) {
+            System.out.println(producto.getNombre() + " con el precio de " + producto.getPrecio() + " recibe un descuento del 20% -> ");
             producto.aplicarDescuento(20);
+            System.out.println(producto.getPrecio());
         }
         
         /*
