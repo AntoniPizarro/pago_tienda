@@ -5,3 +5,5 @@ mvn clean jacoco:prepare-agent install jacoco:report
 mvn jacoco:report
 
 java -jar target/pagoTienda-1.0-SNAPSHOT.jar
+
+cls && mvn clean package && java -jar target/pagoTienda-1.0-SNAPSHOT.jar

@@ -4,6 +4,7 @@ import gpl.granpepinillo.pagoTienda.productos.Producto;
 import gpl.granpepinillo.pagoTienda.trabajadores.Empleado;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Caja {
 
@@ -83,30 +84,38 @@ public class Caja {
         return cantidad;
     }
 
-    public boolean productoRepetido(Producto producto) {
-        for (Producto prod : productos) {
-            if(prod.equals(producto)) {
+    public boolean productoRepetido(Producto producto, List<Producto> lista) {
+        for (Producto prod : lista) {
+            if(prod.getCodigo() == producto.getCodigo()) {
                 return true;
             }
         }
         return false;
     }
 
+    public List<String> nombreProductos(List<Producto> productos) {
+        List<String> nombres = new ArrayList<String>();
+        for (Producto producto : productos) {
+            nombres.add(producto.getNombre());
+        }
+        return nombres;
+    }
+
     public void subtotal() {//Falta completar
-        float total = 0;
-        int cantidad = 0;
-        System.out.println("Producto" + "\t" + "Cantidad" + "\t" + "Precio");
-        for(Producto producto : productos) {
-            total += producto.getPrecio();
-            cantidad = numProducto(producto);
-            if(!productoRepetido(producto)) {
-                System.out.println(producto.getNombre() + "\t" + numProducto(producto) + "\t" + producto.getPrecio() * numProducto(producto));
+        List<Producto> listaTicket = new ArrayList<>();
+        for (Producto producto : productos) {
+            if (!productoRepetido(producto, listaTicket)) {
+                listaTicket.add(producto);
             }
         }
-        System.out.println("Total\t\t" + String.format("%.02f", total));
-        if(this.empleado != null) {
-            System.out.println("");
-            System.out.println("Le atendió " + this.empleado.getNombre());
+
+        for (Producto producto : listaTicket) {
+            System.out.println("Artículo: " + producto.getNombre() + " - Cantidad: " + numProducto(producto.getCodigo()) + " - Precio: " + numProducto(producto) * producto.getPrecio() + "€");
+        }
+        System.out.println("");
+        System.out.println("");
+        if(empleado != null) {
+            System.out.println("Le atendió: " + empleado.getNombre());
         }
     }
 }

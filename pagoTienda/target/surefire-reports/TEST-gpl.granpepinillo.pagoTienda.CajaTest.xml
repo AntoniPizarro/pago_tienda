@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="gpl.granpepinillo.pagoTienda.CajaTest" time="0.032" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="gpl.granpepinillo.pagoTienda.CajaTest" time="0.05" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Users\granp\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\granp\AppData\Local\Temp\surefire6119277515069480168\surefirebooter14681650734295812436.jar C:\Users\granp\AppData\Local\Temp\surefire6119277515069480168 2021-02-17T14-33-06_056-jvmRun1 surefire4584836202851551777tmp surefire_017158372331526988552tmp"/>
+    <property name="sun.java.command" value="C:\Users\granp\AppData\Local\Temp\surefire1249786847516294194\surefirebooter10592232827614944552.jar C:\Users\granp\AppData\Local\Temp\surefire1249786847516294194 2021-02-18T19-55-27_004-jvmRun1 surefire3059244534450328913tmp surefire_014535473271368535960tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\granp\Documents\DAW DUAL\pago_tienda\pagoTienda\target\test-classes;C:\Users\granp\Documents\DAW DUAL\pago_tienda\pagoTienda\target\classes;C:\Users\granp\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\granp\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\granp\AppData\Local\Temp\surefire6119277515069480168\surefirebooter14681650734295812436.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\granp\AppData\Local\Temp\surefire1249786847516294194\surefirebooter10592232827614944552.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="numProductoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0.004"/>
+  <testcase name="numProductoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0.003"/>
   <testcase name="añadirProductoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0"/>
-  <testcase name="quitarEmpleadoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0"/>
+  <testcase name="quitarEmpleadoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0.001"/>
   <testcase name="productoRepetidoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0"/>
-  <testcase name="eliminarProductoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0"/>
+  <testcase name="eliminarProductoTest" classname="gpl.granpepinillo.pagoTienda.CajaTest" time="0.001"/>
 </testsuite>
